@@ -1,8 +1,9 @@
-'use client'
+'use client';
 
 import { useState } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { Copy, Check } from "lucide-react";
+import { toast } from "sonner";
 
 export default function CardSnippets() {
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
@@ -31,9 +32,12 @@ export default function CardSnippets() {
   ];
 
   const copyToClipboard = (content: JSX.Element, index: number) => {
-    const htmlString = renderToStaticMarkup(content); // Convert JSX to HTML string
-    navigator.clipboard.writeText(htmlString); // Copy HTML string to clipboard
+    const htmlString = renderToStaticMarkup(content);
+    navigator.clipboard.writeText(htmlString);
     setCopiedIndex(index);
+    toast.success("Snippet Copied!", {
+      description: "The content of this card layout has been copied to your clipboard.",
+    });
     setTimeout(() => setCopiedIndex(null), 2000);
   };
 

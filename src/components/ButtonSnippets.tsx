@@ -1,8 +1,9 @@
-'use client'
+'use client';
 
 import { useState } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { Copy, Check } from "lucide-react";
+import { toast } from "sonner";
 
 export default function ButtonSnippets() {
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
@@ -103,9 +104,12 @@ export default function ButtonSnippets() {
   ];
 
   const copyToClipboard = (content: JSX.Element, index: number) => {
-    const htmlString = renderToStaticMarkup(content); // Convert JSX to HTML string
-    navigator.clipboard.writeText(htmlString); // Copy HTML string to clipboard
+    const htmlString = renderToStaticMarkup(content);
+    navigator.clipboard.writeText(htmlString);
     setCopiedIndex(index);
+    toast.success("Snippet Copied!", {
+      description: "The content of this button has been copied to your clipboard.",
+    });
     setTimeout(() => setCopiedIndex(null), 2000);
   };
 
@@ -116,7 +120,7 @@ export default function ButtonSnippets() {
           key={index}
           className="p-4 bg-white border-black/10 dark:bg-zinc-900 border dark:border-white/5 rounded-xl flex flex-col items-center text-center relative shadow hover:shadow-md transition-shadow"
         >
-          <h2 className="text-xl text-zinc-700 dark:text-zinc-100 font-bold mb-2">{snippet.title}</h2>
+          {/* <h2 className="text-xl text-zinc-700 dark:text-zinc-100 font-bold mb-2">{snippet.title}</h2> */}
           <p className="text-zinc-500 dark:text-gray-400 mb-4">{snippet.description}</p>
           <div className="text-center bg-zinc-300/80 dark:bg-zinc-950 rounded-xl w-full h-32 flex items-center justify-center relative">
             {snippet.content}
@@ -131,6 +135,9 @@ export default function ButtonSnippets() {
                 <Copy className="h-4 w-4" />
               )}
             </button>
+          </div>
+          <div className="border-t border-border/50 bg-muted/50 px-4 py-3">
+          <p className="text-sm font-medium text-foreground/80">{snippet.title}</p>
           </div>
         </div>
       ))}
