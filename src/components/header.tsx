@@ -6,12 +6,11 @@ import { ThemeToggle } from './mode-toggle'
 
 export function Header() {
   return (
-    <header className="py-7 mx-auto px-4 md:px-2">
-        <nav className="relative flex justify-between">
+    <header className="py-4 mx-auto px-4 md:px-2 border-b border-zinc-200 dark:border-zinc-900">
+        <nav className="mt-2 relative flex justify-between">
           <div className="flex items-center">
             <Link href="/" aria-label="Home" className="flex items-center">
-              {/* <Logo className="h-9 w-9 rounded-md text-sky-950" /> */}
-              <h1 className='-mt-1 text-xl md:text-xl tracking-tighter font-bold text-zinc-800 dark:text-zinc-200'>~/</h1>
+              <h1 className='-mt-1 text-xl md:text-xl tracking-tighter font-extrabold text-zinc-900 dark:text-zinc-100'>UI Collection</h1>
             </Link>
           </div>
           <div className="flex items-center gap-x-4 md:gap-x-6">
