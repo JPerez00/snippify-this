@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import { Button } from './ui/button'
 import { ThemeToggle } from './mode-toggle'
 
 export function Header() {
@@ -10,7 +9,18 @@ export function Header() {
         <nav className="mt-2 relative flex justify-between">
           <div className="flex items-center">
             <Link href="/" aria-label="Home" className="flex items-center">
-              <h1 className='-mt-1 text-xl md:text-xl tracking-tighter font-extrabold text-zinc-900 dark:text-zinc-100'>UI Collection</h1>
+              {/* <h1 className='-mt-1 text-xl md:text-xl tracking-tighter font-extrabold text-zinc-900 dark:text-zinc-100'>UI Collection</h1> */}
+              <div className="text-balance text-xl font-bold tracking-tight text-black dark:text-white">UI{' '}
+                <span className="text-teal-500 dark:text-teal-400 inline-flex flex-col h-[calc(theme(fontSize.xl)*theme(lineHeight.normal))] md:h-[calc(theme(fontSize.xl)*theme(lineHeight.tight))] overflow-hidden">
+                  <ul className="block animate-text-slide-4 text-left leading-tight [&_li]:block">
+                      <li>Snippets</li>
+                      <li>Components</li>
+                      <li>Animations</li>
+                      <li>Collection</li>
+                      <li aria-hidden="true">Snippets</li>
+                  </ul>
+                </span>
+              </div>
             </Link>
           </div>
           <div className="flex items-center gap-x-4 md:gap-x-6">

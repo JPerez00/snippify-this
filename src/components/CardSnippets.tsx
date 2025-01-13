@@ -30,12 +30,25 @@ const snippets = [
       )
     },
     {
-      title: "Basic Card 2",
+      title: "Skeleton Card",
       description: "A clean and simple card layout.",
       content: (
-        <div className="p-6 bg-slate-200 rounded-lg shadow w-full">
-          <h3 className="text-lg font-semibold">Card Title</h3>
-          <p className="text-zinc-600 mt-2">This is a basic card.</p>
+        <div className="border border-slate-200 dark:border-zinc-700 shadow rounded-md p-4 max-w-sm w-full mx-auto bg-zinc-100 dark:bg-zinc-800">
+          <div className="animate-pulse flex space-x-4">
+            <div className="rounded-full bg-slate-700 h-10 w-10"></div>
+            <div className="flex-1 space-y-6 py-1">
+              <div className="h-2 bg-slate-700 rounded"></div>
+              <div className="space-y-3">
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="h-2 bg-slate-700 rounded col-span-2"></div>
+                  <div className="h-2 bg-slate-700 rounded col-span-1"></div>
+                  <div className="h-2 bg-slate-700 rounded col-span-1"></div>
+                  <div className="h-2 bg-slate-700 rounded col-span-2"></div>
+                </div>
+                <div className="h-2 bg-slate-700 rounded"></div>
+              </div>
+            </div>
+          </div>
         </div>
       )
     },
