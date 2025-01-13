@@ -2,9 +2,15 @@
 
 import Link from 'next/link'
 import { ThemeToggle } from './mode-toggle'
+import { motion } from "motion/react"
 
 export function Header() {
   return (
+    <motion.main
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
     <header className="py-4 mx-auto px-4 md:px-2 border-b border-zinc-200 dark:border-zinc-900">
         <nav className="mt-2 relative flex justify-between">
           <div className="flex items-center">
@@ -38,5 +44,6 @@ export function Header() {
           </div>
         </nav>
     </header>
+    </motion.main>
   )
 }

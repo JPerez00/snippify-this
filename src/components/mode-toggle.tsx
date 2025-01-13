@@ -51,8 +51,8 @@ export function ThemeToggle() {
       className="mt-0"
       onClick={() => setTheme(otherTheme)}
     >
-      <SunIcon className="h-8 w-8 stroke-zinc-600 fill-zinc-50 hover:stroke-black dark:hidden " />
-      <MoonIcon className="hidden h-8 w-8 fill-zinc-300 hover:fill-white transition dark:block" />
+      <SunIcon className="h-8 w-8 stroke-zinc-600 fill-zinc-50 hover:stroke-teal-500 dark:hidden " />
+      <MoonIcon className="hidden h-8 w-8 fill-zinc-300 hover:fill-teal-400 transition dark:block" />
     </button>
   )
 }
