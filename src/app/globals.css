@@ -7,3 +7,8 @@
     text-wrap: balance;
   }
 }
+
+::selection {
+  background-color: #14b8a6;
+  color: #fefefe;
+}
