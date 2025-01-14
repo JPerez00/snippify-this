@@ -15,8 +15,11 @@ export default function HomePage() {
     >
       <header className="text-center">
         {/* Hero Title Animation */}
+        <div className="shadow mb-2 lg:mb-4 inline-flex rounded-full px-4 py-1 text-sm text-zinc-600 dark:text-zinc-300 bg-teal-500/10 ring-1 backdrop-blur  ring-teal-400 hover:ring-teal-500 dark:ring-teal-800 dark:hover:ring-teal-700">
+          Copy & Paste, Hassle-free!
+        </div>
         <motion.h1
-          className="text-5xl lg:text-6xl leading-tight lg:leading-tight tracking-tight font-bold bg-gradient-to-r dark:from-white from-30% from-zinc-900 dark:to-teal-500 to-70% to-teal-400 bg-clip-text text-transparent"
+          className="text-5xl lg:text-7xl leading-tight lg:leading-tight tracking-tight font-bold bg-gradient-to-r dark:from-white from-30% from-zinc-900 dark:to-teal-500 to-70% to-teal-400 bg-clip-text text-transparent"
           initial={{ opacity: 0, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -46,8 +49,8 @@ export default function HomePage() {
         viewport={{ once: true }} // Animate only once
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <h2 className="mb-8 text-2xl font-bold text-center tracking-tight text-zinc-700 dark:text-zinc-300">
-          Button Collection:
+        <h2 className="mb-8 text-2xl font-bold text-center tracking-tight text-teal-500 dark:text-teal-400">
+          Browse Button Collection:
         </h2>
         <ButtonSnippets />
       </motion.div>
@@ -60,8 +63,8 @@ export default function HomePage() {
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <h2 className="mb-8 text-2xl text-center font-bold tracking-tight text-zinc-700 dark:text-zinc-300">
-          Card Collection:
+        <h2 className="mb-8 text-2xl text-center font-bold tracking-tight text-teal-500 dark:text-teal-400">
+          Browse Card Collection:
         </h2>
         <CardSnippets />
       </motion.div>

@@ -7,7 +7,7 @@ export function Footer() {
           <div className="flex gap-x-6">
             <Link href="https://x.com/jperezverse" className="group" aria-label="Jorge on X">
               <svg
-                className="h-6 w-6 fill-zinc-400 group-hover:fill-zinc-100"
+                className="h-6 w-6 fill-zinc-500 dark:fill-zinc-400 group-hover:fill-teal-500 group-hover:dark:fill-teal-400"
                 aria-hidden="true"
                 viewBox="0 0 24 24"
               >
@@ -16,7 +16,7 @@ export function Footer() {
             </Link>
             <Link href="https://github.com/JPerez00/snippify-this" className="group" aria-label="Repo on GitHub">
               <svg
-                className="h-6 w-6 fill-zinc-400 group-hover:fill-zinc-100"
+                className="h-6 w-6 fill-zinc-500 dark:fill-zinc-400 group-hover:fill-teal-500 group-hover:dark:fill-teal-400"
                 aria-hidden="true"
                 viewBox="0 0 24 24"
               >
@@ -25,22 +25,9 @@ export function Footer() {
             </Link>
           </div>
           <p className="mt-6 text-sm text-zinc-500 sm:mt-0">
-            Developed by <Link href="https://www.jorge-perez.dev/" className=" hover:text-zinc-300 hover:underline transition-all">Jorge Perez</Link>
+            Developed by <Link href="https://www.jorge-perez.dev/" className=" hover:text-zinc-600 dark:hover:text-zinc-300 hover:underline transition-all">Jorge Perez</Link>
           </p>
         </div>
     </footer>
   )
 }
-
-// export function Footer() {
-//   return (
-//     <footer className="w-full mx-auto max-w-7xl px-4 md:px-2">
-//       <div className="flex flex-col items-center border-t border-zinc-400/20 py-10">
-      
-//         <p className="text-sm text-zinc-400 sm:mt-0">
-//           
-//         </p>
-//       </div>
-//     </footer>
-//   )
-// }

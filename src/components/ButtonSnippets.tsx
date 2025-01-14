@@ -37,7 +37,7 @@ export default function ButtonSnippets() {
       title: "Inner Shadow Button",
       description: "A button with inner white shadow",
       content: (
-        <button className="px-4 py-2 text-white shadow-inner shadow-white/40 bg-teal-700 hover:bg-teal-800 font-semibold rounded-lg transition drop-shadow-md">
+        <button className="px-4 py-2 text-white shadow-inner shadow-white/40 bg-green-700 hover:bg-green-800 font-semibold rounded-lg transition drop-shadow-md">
           Click Me
         </button>
       )
@@ -46,7 +46,7 @@ export default function ButtonSnippets() {
       title: "Inner Shadow Button",
       description: "A button with inner black shadow",
       content: (
-        <button className="px-4 py-2 text-white shadow-inner shadow-black/60 bg-teal-700 hover:bg-teal-800 font-semibold rounded-lg transition drop-shadow-md">
+        <button className="px-4 py-2 text-white shadow-inner shadow-black/60 bg-purple-700 hover:bg-purple-800 font-semibold rounded-lg transition drop-shadow-md">
           Click Me
         </button>
       )
@@ -84,7 +84,7 @@ export default function ButtonSnippets() {
     },
     {
       title: "Hover up Button",
-      description: "Hover Up button with bg color change.",
+      description: "Hover Up button with BG color change.",
       content: (
         <button className="px-4 py-2 bg-sky-600 font-semibold rounded-lg hover:bg-blue-700 relative block overflow-hidden text-white cursor-pointer group transition-colors duration-500 shadow-md">
           <span className="flex items-center justify-center h-full transition-transform duration-500 group-hover:-translate-y-[120%]">Main Text</span>
@@ -107,6 +107,34 @@ export default function ButtonSnippets() {
         </span>
       )
     },
+    {
+      title: "Back To Top Button",
+      description: "Used on this page.",
+      content: (
+        <button
+          aria-label="Scroll To Top"
+          type="button"
+          className="-mt-1 group px-2.5 py-2.5 border border-zinc-200 dark:border-zinc-700 rounded-lg shadow-md bg-white dark:bg-zinc-900"
+        >
+          <svg className="h-5 w-5 fill-zinc-600 dark:fill-zinc-300" viewBox="0 0 20 20">
+            <path
+              fillRule="evenodd"
+              d="M3.293 9.707a1 1 0 010-1.414l6-6a1 1 0 011.414 0l6 6a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L4.707 9.707a1 1 0 01-1.414 0z"
+              clipRule="evenodd"
+            />
+          </svg>
+        </button>
+      )
+    },
+    {
+      title: "Info Banner",
+      description: "Used at the top of this page.",
+      content: (
+        <div className="shadow inline-flex rounded-full px-4 py-2 text-sm text-zinc-700 dark:text-zinc-300 bg-teal-500/10 ring-1 backdrop-blur ring-teal-400 hover:ring-teal-500 dark:ring-teal-900 dark:hover:ring-teal-800">
+          Copy & Paste, Hassle-free!
+        </div>
+      )
+    },
   ];
 
   const copyToClipboard = (content: JSX.Element, index: number) => {
@@ -123,7 +151,7 @@ export default function ButtonSnippets() {
     <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       {snippets.map((snippet, index) => (
         <div key={index} className="group relative overflow-hidden border border-zinc-200 dark:border-zinc-700 rounded-lg shadow-md bg-white dark:bg-zinc-900 transition-transform hover:shadow-lg">
-          <div className="absolute right-4 top-4 z-10 opacity-0 transition-opacity group-hover:opacity-100">
+          <div className="absolute right-2 top-2 z-10 opacity-0 transition-opacity group-hover:opacity-100">
             <button
               onClick={() => copyToClipboard(snippet.content, index)}
               className="rounded-full bg-zinc-100 dark:bg-zinc-950 p-2 text-zinc-500 hover:text-black dark:hover:text-white backdrop-blur shadow"
