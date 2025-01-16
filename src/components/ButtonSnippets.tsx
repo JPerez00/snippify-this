@@ -114,7 +114,7 @@ export default function ButtonSnippets() {
         <button
           aria-label="Scroll To Top"
           type="button"
-          className="-mt-1 group px-2.5 py-2.5 border border-zinc-200 dark:border-zinc-700 rounded-lg shadow-md bg-white dark:bg-zinc-900"
+          className="-mt-1 group px-2.5 py-2.5 border border-zinc-200 dark:border-zinc-700 rounded-lg shadow-md bg-white hover:bg-zinc-100 dark:bg-zinc-900 hover:dark:bg-zinc-800"
         >
           <svg className="h-5 w-5 fill-zinc-600 dark:fill-zinc-300" viewBox="0 0 20 20">
             <path
@@ -133,6 +133,109 @@ export default function ButtonSnippets() {
         <div className="shadow inline-flex rounded-full px-4 py-2 text-sm text-zinc-700 dark:text-zinc-300 bg-teal-500/10 ring-1 backdrop-blur ring-teal-400 hover:ring-teal-500 dark:ring-teal-900 dark:hover:ring-teal-800">
           Copy & Paste, Hassle-free!
         </div>
+      )
+    },
+    {
+      title: "3D Pop Button",
+      description: "A button that lifts with a shadow pop effect.",
+      content: (
+        <button className="relative px-6 py-3 font-semibold text-white bg-blue-600 rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:-translate-y-1 hover:scale-105">
+          Press Me
+        </button>
+      )
+    },
+    {
+      title: "Glassmorphism Button",
+      description: "A sleek glassy UI button.",
+      content: (
+        <button className="px-4 py-2 bg-black/10 dark:bg-white/10 backdrop-blur-md text-black dark:text-white border border-black/20 dark:border-white/20 rounded-lg font-semibold hover:bg-black/20 dark:hover:bg-white/20 transition shadow-md">
+          Glass Effect
+        </button>
+      )
+    },
+    {
+      title: "Icon Circle Button",
+      description: "A round button for icons.",
+      content: (
+        <button className="w-12 h-12 bg-emerald-600 text-white rounded-full shadow-lg hover:bg-emerald-700 flex items-center justify-center">
+          <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+          </svg>
+        </button>
+      )
+    },
+    {
+      title: "Neon Glow Button",
+      description: "A button that glows with a neon effect.",
+      content: (
+        <button className="relative px-4 py-2 font-semibold text-white bg-purple-700 rounded-lg shadow-lg before:absolute before:inset-0 before:rounded-lg before:border-[2px] before:border-purple-400 before:animate-pulse hover:before:opacity-100">
+          Neon Glow
+        </button>
+      )
+    },
+    {
+      title: "Gradient Hover Swipe Button",
+      description: "A gradient swipe effect on hover.",
+      content: (
+        <button className="relative px-6 py-3 font-semibold text-white bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg overflow-hidden">
+          <span className="relative z-10">Hover Me</span>
+          <span className="absolute inset-0 bg-gradient-to-r from-green-400 to-teal-400 transition-transform duration-500 translate-x-full group-hover:translate-x-0"></span>
+        </button>
+      )
+    },
+    {
+      title: "Floating Button",
+      description: "A button that floats and wobbles slightly.",
+      content: (
+        <button className="px-4 py-2 bg-cyan-600 text-white font-bold rounded-lg shadow-md hover:animate-bounce">
+          Float Away
+        </button>
+      )
+    },
+    {
+      title: "Pill Button with Shadow Pulse",
+      description: "A rounded button with a pulse effect.",
+      content: (
+        <button className="px-6 py-2 text-white bg-pink-600 rounded-full shadow-lg hover:shadow-pink-400/70 animate-pulse">
+          Shadow Pulse
+        </button>
+      )
+    },
+    {
+      title: "Shadow Outline Button",
+      description: "A button with an outline and subtle shadow.",
+      content: (
+        <button className="px-4 py-2 border-2 border-slate-600 dark:border-slate-400 text-slate-600 dark:text-slate-400 font-semibold rounded-lg hover:bg-slate-50 hover:dark:bg-slate-700 hover:shadow-xl">
+          Outline Button
+        </button>
+      )
+    },
+    {
+      title: "Morphing Button",
+      description: "A button that morphs its shape.",
+      content: (
+        <button className="relative w-40 h-12 bg-gradient-to-r from-green-500 to-green-700 rounded-lg text-white font-bold transition-all hover:rounded-full">
+          Morph Me
+        </button>
+      )
+    },
+    {
+      title: "Fire Animation Button",
+      description: "A button that has a fiery effect.",
+      content: (
+        <button className="px-6 py-3 bg-red-700 text-white font-bold rounded-lg shadow-md relative overflow-hidden group">
+          <span className="absolute inset-0 bg-gradient-to-r from-yellow-500 to-red-600 opacity-0 group-hover:opacity-100 transition-all duration-300"></span>
+          <span className="relative">🔥 Fire Up</span>
+        </button>
+      )
+    },
+    {
+      title: "Tilt Button",
+      description: "A button that tilts on hover.",
+      content: (
+        <button className="relative px-6 py-3 bg-gradient-to-r from-green-500 to-lime-600 text-white font-bold rounded-lg transition-transform hover:transform hover:rotate-2 hover:scale-105">
+          Tilt Me
+        </button>
       )
     },
   ];
