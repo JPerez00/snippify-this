@@ -4,6 +4,7 @@ import { useState } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { Copy, Check } from "lucide-react";
 import { toast } from "sonner";
+import Image from "next/image";
 
 export default function CardSnippets() {
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
@@ -114,9 +115,9 @@ export default function CardSnippets() {
       description: "A card for user testimonials.",
       content: (
         <div className="p-6 bg-orange-100 rounded-lg shadow-md text-center">
-          <p className="italic text-zinc-700">"These snippets changed my life! Highly recommend it to everyone."</p>
+          <p className="italic text-zinc-700">&quot;These snippets changed my life! Highly recommend it to everyone.&quot;</p>
           <div className="mt-4 flex items-center justify-center">
-            <img
+            <Image
               src="https://placehold.co/10"
               alt="Jane Doe"
               className="w-8 h-8 rounded-full mr-2"
