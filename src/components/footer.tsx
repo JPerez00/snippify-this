@@ -3,7 +3,7 @@ import Link from 'next/link'
 export function Footer() {
   return (
     <footer>
-        <div className="flex flex-col items-center border-t border-zinc-200 dark:border-zinc-900 py-10 sm:flex-row sm:justify-between">
+        <div className="flex flex-col items-center border-t border-zinc-200 dark:border-zinc-900 py-12 sm:flex-row sm:justify-between">
           <div className="flex gap-x-6">
             <Link href="https://x.com/jperezverse" className="group" aria-label="Jorge on X">
               <svg

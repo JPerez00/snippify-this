@@ -120,7 +120,9 @@ export default function CardSnippets() {
             <Image
               src="https://placehold.co/10"
               alt="Jane Doe"
-              className="w-8 h-8 rounded-full mr-2"
+              className="w-8 h-8 rounded-full mr-2 shadow"
+              width={8}
+              height={8}
             />
             <h4 className="text-lg selection:font-semibold text-zinc-900">Jane Doe</h4>
           </div>
