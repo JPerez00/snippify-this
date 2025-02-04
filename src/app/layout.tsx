@@ -6,6 +6,7 @@ import { Footer } from "@/components/footer";
 import ThemeProvider from '../components/theme-provider';
 import { Toaster } from "sonner";
 import ScrollToTop from '../components/ScrollToTop';
+import { Analytics } from "@vercel/analytics/react"
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -39,6 +40,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <ScrollToTop />
+        <Analytics />
       </ThemeProvider>
       </body>
     </html>
