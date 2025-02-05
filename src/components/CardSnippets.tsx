@@ -139,7 +139,49 @@ export default function CardSnippets() {
           <p className="mt-2 text-zinc-600">This card has a red badge to highlight new content.</p>
         </div>
       )
-    },    
+    },
+    {
+      title: "Twitter/X Card",
+      description: "A Twitter card with Title, description, logo & date.",
+      content: (
+        <div className="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow shadow-slate-950/5">
+          <header className="mb-4 flex items-start justify-between gap-3">
+            <div className="flex items-center gap-2">
+              <Image
+                src="https://placehold.co/10"
+                alt="Profile picture of Naval Ravikant"
+                className="w-10 h-10 rounded-full shadow transition-transform hover:scale-105"
+                width={10}
+                height={10}
+              />
+              <div>
+                <div className="font-bold leading-tight text-slate-950">
+                    Naval Ravikant
+                </div>
+                <div>
+                    <a className="text-sm font-medium text-sky-500 transition hover:text-sky-600" href="https://x.com/naval">
+                        @naval
+                    </a>
+                </div>
+              </div>
+            </div>
+            <a className="mt-1 shrink-0 text-zinc-950 transition hover:text-sky-600" href="https://x.com/">
+                <svg aria-hidden="true" className="fill-current" xmlns="http://www.w3.org/2000/svg" width="18" height="16" fill="none">
+                    <path fillRule="evenodd" d="M16.928 14.054H11.99L8.125 9.162l-4.427 4.892H1.243L6.98 7.712.928.054H5.99L9.487 4.53 13.53.054h2.454l-5.358 5.932 6.303 8.068Zm-4.26-1.421h1.36L5.251 1.4H3.793l8.875 11.232Z"></path>
+                </svg>
+            </a>
+          </header>
+          <div className="grow text-sm text-slate-700">
+            Arm yourself with specific knowledge, accountability, and leverage.
+          </div>
+          <footer className="mt-4 flex items-center gap-2.5 text-slate-500">
+            <div className="text-xs">
+              May 31, 2018
+            </div>
+          </footer>
+        </div>
+      )
+    },  
   ];
 
   const copyToClipboard = (content: JSX.Element, index: number) => {
