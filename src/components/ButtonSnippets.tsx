@@ -238,6 +238,16 @@ export default function ButtonSnippets() {
         </button>
       )
     },
+    {
+      title: "Underline Animation",
+      description: "A button with an animated underline effect.",
+      content: (
+          <button className="relative inline-block cursor-pointer group font-bold">
+            Hover Here
+            <span className="absolute left-0 top-full w-full h-1 bg-white transform scale-x-0 transition-transform duration-400 ease-[cubic-bezier(.86,0,.07,1)] group-hover:scale-x-100 group-hover:origin-bottom-left"></span>
+          </button>
+      )
+    },
   ];
 
   const copyToClipboard = (content: JSX.Element, index: number) => {
