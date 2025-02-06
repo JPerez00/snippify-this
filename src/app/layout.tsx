@@ -19,9 +19,42 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+// export const metadata: Metadata = {
+//   title: "Snippify This! - UI Snippets Collection",
+//   description: "A collection of UI snippets, animations, and cool components for your projects.",
+// };
+
 export const metadata: Metadata = {
   title: "Snippify This! - UI Snippets Collection",
-  description: "A collection of UI snippets, animations, and cool components for your projects.",
+  description:
+    "A collection of UI snippets, animations, and cool components for your projects.",
+  openGraph: {
+    title: "Snippify This! - UI Snippets Collection",
+    description:
+      "A collection of UI snippets, animations, and cool components for your projects.",
+    url: "https://snippify-eight.vercel.app/", 
+    siteName: "Snippify This!",
+    images: [
+      {
+        url: "/images/opengraph-image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Snippify This! - UI Snippets Collection",
+    description:
+      "A collection of UI snippets, animations, and cool components for your projects.",
+    images: [
+      {
+        url: "/images/opengraph-image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
